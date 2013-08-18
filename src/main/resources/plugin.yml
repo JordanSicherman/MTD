@@ -1,6 +1,6 @@
 name: MTD
 description: "Minecraft Tower Defense"
-main: com.jordair.gmail.MTD.MTD
+main: main.java.net.aemservers.MTD.MTD
 version: 0.3
 depends: [DisguiseCraft]
 author: MrTeePee
