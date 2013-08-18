@@ -1,0 +1,124 @@
+name: MTD
+description: "Minecraft Tower Defense"
+main: com.jordair.gmail.MTD.MTD
+version: 0.3
+depends: [DisguiseCraft]
+author: MrTeePee
+
+commands:
+  join:
+    description: Join a game.
+    usage: /<command> <game>
+    aliases: [map, game, play]
+  quit:
+    description: Leave a game.
+    aliases: [leave]
+  guns list:
+    description: List available guns.
+  guns reload:
+    description: Reload PVPGP.
+  games:
+    description: List games.
+    aliases: [list, maps]
+  start:
+    description: Start the game.
+    permission: MTD.start
+    permission-message: You don't have /<permission>
+    aliases: [begin, go]
+  end:
+    description: End the game.
+    permission: MTD.end
+    permission-message: You don't have /<permission>
+    aliases: [terminate]
+  classes:
+    description: List owned classes.
+    alises: [kits, owned, mobs]
+permissions:
+  pvpgunsplus.reload:
+    description: Reload PVPGP.
+    default: op
+  MTD.start:
+    description: Force start the map.
+    default: op
+  MTD.sign:
+    description: Create/remove game signs.
+    default: op
+  MTD.end:
+    description: Force end a map.
+    default: op
+  MTD.mobs:
+    description: All mob access.
+    default: op
+    children:
+      MTD.blaze: true
+      MTD.cavespider: true
+      MTD.creeper: true
+      MTD.enderman: true
+      MTD.ghast: true
+      MTD.giant: true
+#      MTD.horseman: true # Currently not existing. May change in future.
+      MTD.irongolem: true
+      MTD.magmacube: true
+      MTD.pigzombie: true
+      MTD.silverfish: true
+      MTD.skeleton: true
+      MTD.snowman: true
+      MTD.spider: true
+      MTD.witch: true
+      MTD.wither: true
+      MTD.wolf: true
+      MTD.zombie: true
+  MTD.blaze:
+    description: Access to a mob.
+    default: op
+  MTD.cavespider:
+    description: Access to a mob.
+    default: op
+  MTD.creeper:
+    description: Access to a mob.
+    default: op
+  MTD.enderman:
+    description: Access to a mob.
+    default: op
+  MTD.ghast:
+    description: Access to a mob.
+    default: op
+  MTD.giant:
+    description: Access to a mob.
+    default: op
+#  MTD.horseman: # Currently not existing. May change in future.
+#    description: Access to a mob. # Currently not existing. May change in future.
+#    default: op # Currently not existing. May change in future.
+  MTD.irongolem:
+    description: Access to a mob.
+    default: op
+  MTD.magmacube:
+    description: Access to a mob.
+    default: op
+  MTD.pigzombie:
+    description: Access to a mob.
+    default: op
+  MTD.silverfish:
+    description: Access to a mob.
+    default: op
+  MTD.skeleton:
+    description: Access to a mob.
+    default: op
+  MTD.snowman:
+    description: Access to a mob.
+    default: op
+  MTD.spider:
+    description: Access to a mob.
+    default: true
+  MTD.witch:
+    description: Access to a mob.
+    default: op
+  MTD.wither:
+    description: Access to a mob.
+    default: op
+  MTD.wolf:
+    description: Access to a mob.
+    default: op
+  MTD.zombie:
+    description: Access to a mob.
+    default: op

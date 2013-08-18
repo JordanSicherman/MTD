@@ -1,0 +1,41 @@
+gunName=&eDouble Barrel Shotgun
+-------
+gunType=274
+ammoType=295
+ammoAmtNeeded=1
+bulletDelayTime=24
+reloadType=INDIVIDUAL_BULLET
+-------
+roundsPerBurst=1
+bulletsPerClick=8
+gunDamage=4
+armorPenetration=0
+maxDistance=16
+bulletSpeed=3
+accuracy=0.15
+recoil=3
+knockback=3
+-------
+explodeRadius=0
+explosionDamage=0
+fireRadius=0
+canAimLeft=true
+canAimRight=false
+canHeadshot=true
+canShootLeft=false
+canShootRight=true
+--------
+outOfAmmoMessage=This gun needs &cSEEDS
+needsPermission=false
+permissionMessage=&cYou do not have permission to fire this gun!
+--------
+bulletType=SNOWBALL
+gunSound=ghast_fireball,explode
+hasSmokeTrail=false
+--------
+hasClip=true
+maxClipSize=2
+reloadGunOnDrop=true
+reloadTime=85
+--------
+localGunSound=false

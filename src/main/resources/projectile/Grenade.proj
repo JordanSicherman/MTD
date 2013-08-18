@@ -1,0 +1,28 @@
+gunName=&eGrenade
+-------
+gunType=341
+ammoType=341
+ammoAmtNeeded=1
+bulletDelayTime=20
+-------
+roundsPerBurst=1
+bulletsPerClick=1
+gunDamage=30
+maxDistance=0
+bulletSpeed=0.9
+accuracy=0
+timeuntilrelease=75
+-------
+canAim=false
+explodeRadius=4
+fireRadius=0
+canHeadshot=true
+canClickLeft=true
+canClickRight=true
+--------
+outOfAmmoMessage=This gun needs &cSLIME BALL
+gunSound=shoot arrow
+needsPermission=false
+permissionMessage=&cYou do not have permission to throw this!
+--------
+hasClip=false

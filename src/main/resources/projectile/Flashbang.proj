@@ -1,0 +1,27 @@
+gunName=&eFlashBang
+-------
+gunType=348
+ammoType=348
+ammoAmtNeeded=1
+bulletDelayTime=20
+-------
+roundsPerBurst=1
+bulletsPerClick=1
+gunDamage=30
+maxDistance=0
+bulletSpeed=0.9
+accuracy=0
+timeuntilrelease=50
+-------
+flashRadius=12
+canAim=false
+canHeadshot=true
+canClickLeft=true
+canClickRight=true
+--------
+outOfAmmoMessage=This gun needs &cGLOWSTONE DUST
+gunSound=shoot arrow
+needsPermission=false
+permissionMessage=&cYou do not have permission to throw this!
+--------
+hasClip=false

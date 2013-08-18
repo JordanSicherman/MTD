@@ -1,0 +1,100 @@
+//The Name of the Gun
+gunName=&eSniper Rifle
+
+//The Item ID of the GUN
+gunType=284
+
+//The Item ID of the ammo that the gun uses
+ammoType=262
+
+//The amount of ammo your gun needs
+ammoAmtNeeded=1
+
+//The delay (in ticks) before you can shoot again
+bulletDelayTime=60
+
+//The reloading sound mechanism (NORMAL, PUMP, BOLT, INDIVIDUAL_BULLET)
+reloadType=INDIVIDUAL_BULLET
+
+//The amount of bullets your gun fires per burst
+roundsPerBurst=1
+
+//The amount of bullet your gun fires in a group
+bulletsPerClick=1
+
+//The damage PER BULLET (20 damage = 10 hearts)
+gunDamage=13
+
+//The amount of health subtracted from the player when hit (ignores armor)
+armorPenetration=4
+
+//The max distance the bullet will travel
+maxDistance=30
+
+//The speed of the bullet
+bulletSpeed=5
+
+//The accuracy of the bullet (the lower, the better)
+accuracy=0
+
+//The accuracy of the bullet when aimed in (The lower, the better)
+accuracy_aimed=0
+
+//The accuracy of the bullet while crouched (the lower, the better)
+accuracy_crouched=0
+
+//The amount of blocks a gun will push you back
+recoil=0
+
+//The amount of blocks a player hit by your gun will be blown back
+knockback=1
+
+//Whether or not your gun can aim
+canAimLeft=true
+canAimRight=false
+
+//Whether or not you gun can headshot
+canHeadshot=true
+
+//Whether or not your gun can aim with the left or right mouse
+canShootLeft=false
+canShootRight=true
+
+//The radius in which an explosion will reach
+explodeRadius=0
+
+//The amount of damage an explosion will do
+explosionDamage=0
+
+//The radius of fire that is created by a gun
+fireRadius=0
+
+//The message displayed when you are out of ammo
+outOfAmmoMessage=This gun needs &cARROWS
+
+//The message displayed when you do not have permission to fire a gun
+permissionMessage=&cYou do not have permission to fire this gun!
+
+//Whether or not you need to have permissions to fire a gun
+needsPermission=true
+
+//The type of bullet fired (SNOWBALL, EGG, ARROW)
+bulletType=ARROW
+
+//The sound(s) ALL played (at the same time) when a gun is fired (seperated by commas. NO SPACES)
+gunSound=ghast_fireball
+
+//Whether or not a bullet has a smoke trail
+hasSmokeTrail=true
+
+//The volume of the gun (between 0 and 2)
+gunVolume=2
+
+//Clip information
+hasClip=true
+maxClipSize=3
+reloadGunOnDrop=true
+reloadTime=70
+
+//Whether or not the guns sound is local to the client or global
+localGunSound=false

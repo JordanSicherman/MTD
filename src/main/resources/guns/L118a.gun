@@ -1,0 +1,100 @@
+//The Name of the Gun
+gunName=&eL118a
+
+//The Item ID of the GUN
+gunType=294
+
+//The Item ID of the ammo that the gun uses
+ammoType=337
+
+//The amount of ammo your gun needs
+ammoAmtNeeded=1
+
+//The delay (in ticks) before you can shoot again
+bulletDelayTime=18
+
+//The reloading sound mechanism (NORMAL, PUMP, BOLT, INDIVIDUAL_BULLET)
+reloadType=NORMAL
+
+//The amount of bullets your gun fires per burst
+roundsPerBurst=1
+
+//The amount of bullet your gun fires in a group
+bulletsPerClick=1
+
+//The damage PER BULLET (20 damage = 10 hearts)
+gunDamage=7
+
+//The amount of health subtracted from the player when hit (ignores armor)
+armorPenetration=0
+
+//The max distance the bullet will travel
+maxDistance=64
+
+//The speed of the bullet
+bulletSpeed=4
+
+//The accuracy of the bullet (the lower, the better)
+accuracy=0.1
+
+//The accuracy of the bullet when aimed in (The lower, the better)
+accuracy_aimed=0.035
+
+//The accuracy of the bullet while crouched (the lower, the better)
+accuracy_crouched=0.05
+
+//The amount of blocks a gun will push you back
+recoil=0
+
+//The amount of blocks a player hit by your gun will be blown back
+knockback=0
+
+//Whether or not your gun can aim
+canAimLeft=true
+canAimRight=false
+
+//Whether or not you gun can headshot
+canHeadshot=true
+
+//Whether or not your gun can aim with the left or right mouse
+canShootLeft=false
+canShootRight=true
+
+//The radius in which an explosion will reach
+explodeRadius=0
+
+//The amount of damage an explosion will do
+explosionDamage=0
+
+//The radius of fire that is created by a gun
+fireRadius=0
+
+//The message displayed when you are out of ammo
+outOfAmmoMessage=Out Of Ammo!
+
+//The message displayed when you do not have permission to fire a gun
+permissionMessage=&cYou do not have permission to fire this gun!
+
+//Whether or not you need to have permissions to fire a gun
+needsPermission=false
+
+//The type of bullet fired (SNOWBALL, EGG, ARROW)
+bulletType=SNOWBALL
+
+//The sound(s) ALL played (at the same time) when a gun is fired (seperated by commas. NO SPACES)
+gunSound=irongolem_hit,wither_shoot
+
+//Whether or not a bullet has a smoke trail
+hasSmokeTrail=false
+
+//The volume of the gun (between 0 and 2)
+gunVolume=1.5
+
+//Clip information
+hasClip=true
+maxClipSize=5
+reloadGunOnDrop=true
+reloadTime=85
+
+//Whether or not the guns sound is local to the client or global
+localGunSound=false

@@ -1,0 +1,143 @@
+gunName=&eM16
+-------
+gunType=292
+ammoType=318
+ammoAmtNeeded=1
+bulletDelayTime=16
+reloadType=NORMAL
+-------
+roundsPerBurst=4
+bulletsPerClick=1
+gunDamage=3
+armorPenetration=0
+maxDistance=48
+bulletSpeed=4
+accuracy=0.12
+accuracy_aimed=0
+recoil=0
+knockback=0
+-------
+canAim=true
+explodeRadius=0
+explosionDamage=0
+fireRadius=0
+canHeadshot=true
+canClickLeft=true
+canClickRight=true
+--------
+outOfAmmoMessage=This gun needs &cFLINT
+needsPermission=false
+permissionMessage=&cYou do not have permission to fire this gun!
+--------
+bulletType=SNOWBALL
+gunSound=note_snare_drum,item_break,ghast_fireball
+hasSmokeTrail=false
+--------
+hasClip=true
+maxClipSize=30
+reloadGunOnDrop=true
+reloadTime=70
+--------
+localGunSound=false
+
+
+//The Name of the Gun
+gunName=&eM16
+
+//The Item ID of the GUN
+gunType=292
+
+//The Item ID of the ammo that the gun uses
+ammoType=318
+
+//The amount of ammo your gun needs
+ammoAmtNeeded=1
+
+//The delay (in ticks) before you can shoot again
+bulletDelayTime=16
+
+//The reloading sound mechanism (NORMAL, PUMP, BOLT, INDIVIDUAL_BULLET)
+reloadType=NORMAL
+
+//The amount of bullets your gun fires per burst
+roundsPerBurst=3
+
+//The amount of bullet your gun fires in a group
+bulletsPerClick=1
+
+//The damage PER BULLET (20 damage = 10 hearts)
+gunDamage=3
+
+//The amount of health subtracted from the player when hit (ignores armor)
+armorPenetration=0
+
+//The max distance the bullet will travel
+maxDistance=64
+
+//The speed of the bullet
+bulletSpeed=4
+
+//The accuracy of the bullet (the lower, the better)
+accuracy=0.12
+
+//The accuracy of the bullet when aimed in (The lower, the better)
+accuracy_aimed=0.015
+
+//The accuracy of the bullet while crouched (the lower, the better)
+accuracy_crouched=0.06
+
+//The amount of blocks a gun will push you back
+recoil=0.2
+
+//The amount of blocks a player hit by your gun will be blown back
+knockback=0.5
+
+//Whether or not your gun can aim
+canAimLeft=true
+canAimRight=false
+
+//Whether or not you gun can headshot
+canHeadshot=true
+
+//Whether or not your gun can aim with the left or right mouse
+canShootLeft=false
+canShootRight=true
+
+//The radius in which an explosion will reach
+explodeRadius=0
+
+//The amount of damage an explosion will do
+explosionDamage=0
+
+//The radius of fire that is created by a gun
+fireRadius=0
+
+//The message displayed when you are out of ammo
+outOfAmmoMessage=Out Of Ammo!
+
+//The message displayed when you do not have permission to fire a gun
+permissionMessage=&cYou do not have permission to fire this gun!
+
+//Whether or not you need to have permissions to fire a gun
+needsPermission=false
+
+//The type of bullet fired (SNOWBALL, EGG, ARROW)
+bulletType=SNOWBALL
+
+//The sound(s) ALL played (at the same time) when a gun is fired (seperated by commas. NO SPACES)
+gunSound=skeleton_hurt,zombie_wood,ghast_fireball
+
+//Whether or not a bullet has a smoke trail
+hasSmokeTrail=false
+
+//The volume of the gun (between 0 and 2)
+gunVolume=1.5
+
+//Clip information
+hasClip=true
+maxClipSize=30
+reloadGunOnDrop=true
+reloadTime=60
+
+//Whether or not the guns sound is local to the client or global
+localGunSound=false

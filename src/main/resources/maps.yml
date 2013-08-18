@@ -1,0 +1,59 @@
+# Welcome to the maps file for Minecraft Tower Defense.
+# To make a map, simply follow the following instructions.
+
+# Map Template - Spacing is important! #
+#<NAME>:
+#  game_world: <WORLD_NAME>
+#  lobby_spawnpoint: x,y,z
+#  mobs_spawnpoint: x,y,z
+#  finishline:
+#    p1: x,y,z
+#    p2: x,y,z
+#  towers:
+#  - x,y,z
+#  - x,y,z
+#  - x,y,z
+#  signs:
+
+# Copy and paste the template as needed.
+# The following is an example game.
+
+MTD:
+  game_world: mtd
+  lobby_spawnpoint: 0,4,0
+  mobs_spawnpoint: 10,4,10
+  finishline:
+    p1: 10,4,0
+    p2: 20,4,0
+  towers:
+  - 22,10,0
+  - 8,10,0
+  signs:
+  
+# Now let's examine it.
+
+# MTD - The name of the map (case-sensitive!). Please don't specify multiple maps with the same name or you'll have troubles.
+#
+# game_world: The world in which the game will be played. Uses this world in the locations of the lobby, etc.
+#             If the world doesn't exist at startup, it will be created. If you're using BungeeCord, it will be created but not used.
+# lobby_spawnpoint: The location players will spawn upon joining the map. This one is in the World 'mtd' at 0, 4, 0
+#
+# mobs_spawnpoint: The location the mobs will spawn once the map starts. Also where the archers spawn when building starts.
+#                  This one is in the World 'mtd' at 10, 4, 10
+# finishline: p1 and p2 are two separate points that make up the finish line to the tower defense. **Their Y-coordinate must be the same**!
+#             They must also share either the X or Z coordinate. In this example, the player must cross the Z-coordinate of 0 between the
+#             X-coordinate of 10 and 20.
+# towers: Locations where archers will spawn into after building. If you specify less towers then there are archers, they will loop through
+#         And add more in order. eg. If there were 5 archers in this map, three would be on the tower at 22, 10, 0 and two would be at 8, 10, 0
+# signs: Either leave this entry blank or specify the location of signs you wish to track the game in the same format as the towers.
+#        Signs update every second and can be easily added or removed by:
+#        A) Placing a sign like so:
+#               [MTD]
+#               <MAP>
+#           Where <MAP> is the name of the map to track.
+#        B) Breaking a sign to remove it.
+#
+# As long as you have proper spacing, everything should work perfectly. Note that underscores must be used in map names - not spaces!
+#
+# It is important to note that games cannot be played in the main world (The one specified in bukkit.yml) as they cannot be rolled back!
+# If you run a game on your main world, DO NOT EXPECT ROLLBACK.

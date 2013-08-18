@@ -1,0 +1,51 @@
+# The amount of players that will be mobs at the start of the game. Percentage from 0.0 (0%, will fallback to 1 player) to 1.0 (100%)
+mobs: 0.5
+
+# Once the player count in a map reaches this number, the map will begin it's countdown. It will still accept players while counting down.
+map_capacity: 30
+
+# The lives the archers get at the beginning of the game (ie. The number of times mobs have to cross the finish to win)
+lives: 50
+
+# Command to be executed when the player has to leave the game map (ie. Game end / rollback)
+# No slash necessary. Recommended use: 'server hub' for BungeeCord
+leave_command: ""
+
+# Whether or not you use BungeeCord. It is recommended to either put each game on a different world or different server if you have the
+# resources available. When a game finishes, the **entire** map is rolled back to the state it was in before the game.
+# If set to true, upon joining a map, the player will first execute /server <mapname> and then teleport to the lobby.
+# ENSURE YOUR SERVER NAMES ARE THE SAME AS THE MAPNAME.
+bungeecord: false
+
+# The world to teleport the player to when they have to leave the game map (if leave_command is left blank)
+# Essentially the hub world if not using BungeeCord. If this world cannot be used, they will be kicked instead.
+world: world
+
+# The time at each interval of the game (in seconds).
+wait_time: 10
+build_time: 59
+game_time: 599
+
+# The time (in ticks) between delivering each owned class to a player. The website will be sent a second after all classes are sent.
+# There are 20 ticks per 1 second.
+time_delay: 5
+
+# The link to the buycraft page.
+buycraft: "http://shop.aemservers.net/"
+
+# Messages. Use & for color codes.
+
+game_begins_in: "The game begins in <time> seconds."
+building_ends_in: "The mobs will be released in <time> seconds."
+game_ends_in: "The game ends in <time> seconds."
+
+mobs_released: "The mobs have been released!"
+mob_domination: "Mobs have eliminated all archers and won the game!"
+mob_conquer: "Mobs have conquered the keep and won the game!"
+timer_out: "Archers have held back the mobs and won the game!"
+game_ended: "The game has been ended."
+
+error:
+  no_game: "That game does not exist."
+  not_in_game: "You must be in a game to do that."
+  unable_to_join: "You can't join that game now."
