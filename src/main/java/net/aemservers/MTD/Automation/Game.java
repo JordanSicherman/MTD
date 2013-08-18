@@ -301,7 +301,7 @@ public class Game {
 	}
 
 	public enum Gamestate {
-		WAITING, BUILDING, STARTED;
+		WAITING, BUILDING, STARTED, ENDING;
 	}
 
 	public void updateTime() {
@@ -339,7 +339,7 @@ public class Game {
 	public void stop(boolean force) {
 		if ((force || MobDisguise.alive(getPlayers()).isEmpty() || getCrosses() != null && getCrosses().getScore() == 0 || countdowntime <= 0)
 				&& hasStarted()) {
-			state = Gamestate.WAITING;
+			state = Gamestate.ENDING;
 			MobDisguise.undisguise(getPlayers());
 			if (MobDisguise.alive(getPlayers()).isEmpty())
 				broadcast(Msg.format("mob_domination"));
@@ -376,6 +376,7 @@ public class Game {
 				MTD.instance.getLogger().info("Rolling back " + w.getName());
 				Rollback.rollback(w);
 			}
+			state = Gamestate.WAITING;
 
 			players.clear();
 		}

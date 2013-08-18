@@ -14,6 +14,7 @@ import main.java.net.aemservers.MTD.Commands.Quit;
 import main.java.net.aemservers.MTD.Commands.Start;
 import main.java.net.aemservers.MTD.Listeners.DeathDamage;
 import main.java.net.aemservers.MTD.Listeners.Disconnect;
+import main.java.net.aemservers.MTD.Listeners.LeaveDuringGame;
 import main.java.net.aemservers.MTD.Listeners.Movement;
 import main.java.net.aemservers.MTD.Listeners.PreStart;
 import main.java.net.aemservers.MTD.Listeners.Signage;
@@ -31,12 +32,10 @@ public class MTD extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
-
-		pvpgp = new PVPGunsPlus();
-		pvpgp.doEnable(this);
-
 		instance = this;
 		saveDefaultConfig();
+		pvpgp = new PVPGunsPlus();
+		pvpgp.doEnable(this);
 		mapsFile = YamlConfiguration.loadConfiguration(loadMapsFile());
 		loadGames();
 
@@ -45,6 +44,10 @@ public class MTD extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new Disconnect(), this);
 		getServer().getPluginManager().registerEvents(new PreStart(), this);
 		getServer().getPluginManager().registerEvents(new Signage(), this);
+		getServer().getPluginManager().registerEvents(new LeaveDuringGame(), this);
+
+		getServer().getPluginManager().registerEvents(pvpgp.playerListener, this);
+		getServer().getPluginManager().registerEvents(pvpgp.entityListener, this);
 
 		getCommand("join").setExecutor(new Join());
 		getCommand("quit").setExecutor(new Quit());

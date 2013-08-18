@@ -175,7 +175,7 @@ public class MobDisguise {
 			break;
 		case Wither:
 			ItemStack witherchest = new ItemStack(Material.DIAMOND_CHESTPLATE, 1);
-			witherchest.addEnchantment(Enchantment.THORNS, 5);
+			witherchest.addUnsafeEnchantment(Enchantment.THORNS, 5);
 			player.getInventory().setChestplate(witherchest);
 			player.getInventory().addItem(new ItemStack(Material.IRON_SWORD, 1));
 			break;
