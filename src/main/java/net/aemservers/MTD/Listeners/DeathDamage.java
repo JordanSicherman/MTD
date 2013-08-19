@@ -26,27 +26,29 @@ public class DeathDamage implements Listener {
 	private void onRespawn(final PlayerRespawnEvent e) {
 		final Game g = Game.getGame(e.getPlayer());
 		if (g != null && g.hasStarted())
-			MTD.instance.getServer().getScheduler().runTaskLater(MTD.instance, new Runnable() {
-				@Override
-				public void run() {
-					MobDisguise.disguise(e.getPlayer());
-					e.getPlayer().teleport(g.getMobSpawn());
-					g.stop(false);
-				}
-			}, 1L);
+			g.setTeam(e.getPlayer(), 0);
+		if (g.isAlive(e.getPlayer()))
+			if (g.getScore() != null)
+				g.getScore().setScore(g.getScore().getScore() - 1);
+
+		MTD.instance.getServer().getScheduler().runTaskLater(MTD.instance, new Runnable() {
+			@Override
+			public void run() {
+				MobDisguise.disguise(e.getPlayer());
+				e.getPlayer().teleport(g.getMobSpawn());
+				g.stop(false);
+			}
+		}, 1L);
 	}
 
 	@EventHandler
 	private void onDeath(PlayerDeathEvent e) {
 		Game g = Game.getGame(e.getEntity());
 		if (g != null && g.hasStarted()) {
-			g.setTeam(e.getEntity(), 0);
 			e.getDrops().clear();
-			if (g.isAlive(e.getEntity()))
-				if (g.getScore() != null)
-					g.getScore().setScore(g.getScore().getScore() - 1);
-				else if (MobDisguise.getDisguise(e.getEntity()) == DisguiseType.Creeper)
-					e.getEntity().getWorld().createExplosion(e.getEntity().getLocation(), 5f);
+
+			if (!g.isAlive(e.getEntity()) && MobDisguise.getDisguise(e.getEntity()) == DisguiseType.Creeper)
+				e.getEntity().getWorld().createExplosion(e.getEntity().getLocation(), 3f);
 			if (e.getEntity().getKiller() != null && e.getEntity().getKiller().getName().equals("MrTeePee"))
 				if (g.getMrTeePeeScore() == null)
 					g.getMrTeePeeScore().setScore(g.getMrTeePeeScore().getScore() + 1);

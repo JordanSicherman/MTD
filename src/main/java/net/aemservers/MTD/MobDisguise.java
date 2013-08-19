@@ -89,7 +89,7 @@ public class MobDisguise {
 			cavespiderboots.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 10);
 			Potion cavepoison = new Potion(PotionType.POISON);
 			cavepoison.setHasExtendedDuration(true);
-			cavepoison.setLevel(5);
+			cavepoison.setLevel(2);
 			cavepoison.setSplash(true);
 			player.getInventory().addItem(cavepoison.toItemStack(32));
 			player.getInventory().setBoots(cavespiderboots);
@@ -165,7 +165,7 @@ public class MobDisguise {
 		case Witch:
 			Potion poison = new Potion(PotionType.POISON);
 			poison.setHasExtendedDuration(true);
-			poison.setLevel(3);
+			poison.setLevel(2);
 			poison.setSplash(true);
 			Potion damage = new Potion(PotionType.INSTANT_DAMAGE);
 			damage.setLevel(2);
@@ -191,7 +191,7 @@ public class MobDisguise {
 			MTD.debug("Case " + type + " not specified.");
 			break;
 		}
-		player.getInventory().setHeldItemSlot(1);
+		player.getInventory().setHeldItemSlot(0);
 		player.setHealth(player.getMaxHealth());
 		player.setFoodLevel(20);
 		player.setSaturation(20);
@@ -223,7 +223,7 @@ public class MobDisguise {
 			player.getInventory().addItem(bow);
 			player.getInventory().addItem(new ItemStack(Material.ARROW, 1));
 
-			player.getInventory().setHeldItemSlot(1);
+			player.getInventory().setHeldItemSlot(0);
 			player.setHealth(player.getMaxHealth());
 			player.setFoodLevel(20);
 			player.setSaturation(20);

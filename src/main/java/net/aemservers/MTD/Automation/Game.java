@@ -286,7 +286,7 @@ public class Game {
 		for (PotionEffect effect : p.getActivePotionEffects())
 			p.removePotionEffect(effect.getType());
 		p.getInventory().setArmorContents(null);
-		p.getInventory().setHeldItemSlot(1);
+		p.getInventory().setHeldItemSlot(0);
 		ItemStack bow = new ItemStack(Material.BOW, 1);
 		bow.addUnsafeEnchantment(Enchantment.ARROW_DAMAGE, 1);
 		bow.addUnsafeEnchantment(Enchantment.ARROW_INFINITE, 10);
@@ -350,39 +350,47 @@ public class Game {
 			else
 				broadcast(Msg.format("game_ended"));
 			countdowntime = -1;
-			World w = lobby != null ? Bukkit.getWorld(lobby.world) : mobspawn != null ? Bukkit.getWorld(mobspawn.world) : !getPlayers()
-					.isEmpty() ? getPlayers().get(0).getWorld() : null;
-			for (Player p : getPlayers())
-				if (p != null) {
-					p.getInventory().setContents(new ItemStack[p.getInventory().getSize()]);
-					for (PotionEffect effect : p.getActivePotionEffects())
-						p.removePotionEffect(effect.getType());
-					p.getInventory().setArmorContents(null);
-					toSpawn(p);
-					try {
-						p.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
-					} catch (Exception e) {
+			MTD.instance.getServer().getScheduler().runTaskLater(MTD.instance, new Runnable() {
+				public void run() {
+					World w = lobby != null ? Bukkit.getWorld(lobby.world) : mobspawn != null ? Bukkit.getWorld(mobspawn.world)
+							: !getPlayers().isEmpty() ? getPlayers().get(0).getWorld() : null;
+					for (Player p : getPlayers())
+						if (p != null) {
+							p.getInventory().setContents(new ItemStack[p.getInventory().getSize()]);
+							for (PotionEffect effect : p.getActivePotionEffects())
+								p.removePotionEffect(effect.getType());
+							p.getInventory().setArmorContents(null);
+							try {
+								p.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
+							} catch (Exception e) {
 
+							}
+						}
+					if (w != null) {
+						for (Player p : w.getPlayers())
+							toSpawn(p);
+						/*
+						 * Any stragglers (if the command failed to execute)
+						 */
+						for (Player p : w.getPlayers())
+							toSpawn(p, null);
+						MTD.instance.getLogger().info("Rolling back " + w.getName());
+						Rollback.rollback(w);
+					} else {
+						for (Player p : Bukkit.getOnlinePlayers())
+							toSpawn(p, null);
 					}
-				}
-			if (w != null) {
-				for (Player p : w.getPlayers())
-					toSpawn(p);
-				/*
-				 * Any stragglers (if the command failed to execute)
-				 */
-				for (Player p : w.getPlayers())
-					toSpawn(p, null);
-				MTD.instance.getLogger().info("Rolling back " + w.getName());
-				Rollback.rollback(w);
-			}
-			state = Gamestate.WAITING;
+					state = Gamestate.WAITING;
 
-			players.clear();
+					players.clear();
+				}
+			}, 200L);
+
 		}
 	}
 
 	private void toSpawn(Player p) {
+		if (p == null || !p.isOnline()) { return; }
 		String cmd = MTD.instance.getConfig().getString("leave_command");
 		if (cmd == null || cmd.isEmpty()) {
 			toSpawn(p, Bukkit.getWorld(MTD.instance.getConfig().getString("world")));
@@ -393,7 +401,7 @@ public class Game {
 
 	private void toSpawn(Player p, World w) {
 		if (w == null) {
-			if (p != null)
+			if (p != null && p.isOnline())
 				p.kickPlayer("The world you were on is being rolled-back.");
 			return;
 		}
