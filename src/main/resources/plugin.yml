@@ -32,7 +32,7 @@ commands:
     aliases: [terminate]
   classes:
     description: List owned classes.
-    alises: [kits, owned, mobs]
+    aliases: [kits, owned, mobs]
 permissions:
   pvpgunsplus.reload:
     description: Reload PVPGP.
@@ -109,7 +109,7 @@ permissions:
     default: op
   MTD.spider:
     description: Access to a mob.
-    default: true
+    default: op
   MTD.witch:
     description: Access to a mob.
     default: op
@@ -121,4 +121,4 @@ permissions:
     default: op
   MTD.zombie:
     description: Access to a mob.
-    default: op
+    default: true

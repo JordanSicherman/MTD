@@ -487,7 +487,7 @@ public class Gun {
 	}
 
 	public void setPermissionMessage(String val) {
-		val = val.replace("&", "ยง");
+		val = val.replace("&", "ง");
 		permissionMessage = val;
 	}
 
