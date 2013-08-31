@@ -7,6 +7,7 @@ import main.java.net.aemservers.MTD.MTD;
 import main.java.net.aemservers.MTD.PVPGunsPlus;
 import main.java.orange451.pvpgunplus.events.PVPGunPlusFireGunEvent;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -482,12 +483,12 @@ public class Gun {
 	}
 
 	public void setOutOfAmmoMessage(String val) {
-		val = val.replace("&", "ยง");
+		val = ChatColor.translateAlternateColorCodes('&', val);
 		outOfAmmoMessage = val;
 	}
 
 	public void setPermissionMessage(String val) {
-		val = val.replace("&", "ง");
+		val = ChatColor.translateAlternateColorCodes('&', val);
 		permissionMessage = val;
 	}
 
