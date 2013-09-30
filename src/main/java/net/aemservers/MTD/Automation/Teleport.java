@@ -30,17 +30,26 @@ public class Teleport {
 	 *            Whether or not to keep the vehicle
 	 */
 	public static void teleport(Player p, Location to, boolean keepVehicle) {
+		if (to == null || p == null)
+			return;
+
 		if (p.isInsideVehicle()) {
 			// Eject the vehicle...
 			Entity vehicle = p.getVehicle();
 			vehicle.eject();
-			// Teleport the player and vehicle separately...
-			vehicle.teleport(to);
+			// Teleport the player...
 			p.teleport(to);
-			// Remount the vehicle.
-			vehicle.setPassenger(p);
+			// Remove the vehicle if it's not persisting.
+			if (!keepVehicle)
+				vehicle.remove();
+			else {
+				// Otherwise teleport the vehicle and remount.
+				vehicle.teleport(to);
+				vehicle.setPassenger(p);
+			}
 			return;
 		}
+
 		p.teleport(to);
 	}
 }
