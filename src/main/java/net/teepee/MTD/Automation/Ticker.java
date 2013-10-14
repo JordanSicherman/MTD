@@ -1,8 +1,8 @@
-package main.java.net.aemservers.MTD.Automation;
+package main.java.net.teepee.MTD.Automation;
 
-import main.java.net.aemservers.MTD.MTD;
-import main.java.net.aemservers.MTD.Automation.Game.Gamestate;
-import main.java.net.aemservers.MTD.Commands.Msg;
+import main.java.net.teepee.MTD.MTD;
+import main.java.net.teepee.MTD.Automation.Game.Gamestate;
+import main.java.net.teepee.MTD.Commands.Msg;
 
 public class Ticker implements Runnable {
 

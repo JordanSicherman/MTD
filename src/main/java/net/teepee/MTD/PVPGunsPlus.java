@@ -1,4 +1,4 @@
-package main.java.net.aemservers.MTD;
+package main.java.net.teepee.MTD;
 
 import java.io.File;
 import java.util.ArrayList;

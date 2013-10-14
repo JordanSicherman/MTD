@@ -1,6 +1,6 @@
-package main.java.net.aemservers.MTD.Automation;
+package main.java.net.teepee.MTD.Automation;
 
-import main.java.net.aemservers.MTD.MTD;
+import main.java.net.teepee.MTD.MTD;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;

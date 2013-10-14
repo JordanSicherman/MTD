@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import main.java.net.aemservers.MTD.MTD;
+import main.java.net.teepee.MTD.MTD;
 import main.java.orange451.pvpgunplus.events.PVPGunPlusGunDamageEntityEvent;
 import main.java.orange451.pvpgunplus.gun.Gun;
 import main.java.orange451.pvpgunplus.gun.GunPlayer;

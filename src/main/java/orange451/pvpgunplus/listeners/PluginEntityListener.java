@@ -1,7 +1,7 @@
 package main.java.orange451.pvpgunplus.listeners;
 
-import main.java.net.aemservers.MTD.MTD;
-import main.java.net.aemservers.MTD.PVPGunsPlus;
+import main.java.net.teepee.MTD.MTD;
+import main.java.net.teepee.MTD.PVPGunsPlus;
 import main.java.orange451.pvpgunplus.events.PVPGunPlusBulletCollideEvent;
 import main.java.orange451.pvpgunplus.events.PVPGunPlusGunDamageEntityEvent;
 import main.java.orange451.pvpgunplus.events.PVPGunPlusGunKillEntityEvent;

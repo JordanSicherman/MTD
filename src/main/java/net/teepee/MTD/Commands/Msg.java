@@ -1,6 +1,6 @@
-package main.java.net.aemservers.MTD.Commands;
+package main.java.net.teepee.MTD.Commands;
 
-import main.java.net.aemservers.MTD.MTD;
+import main.java.net.teepee.MTD.MTD;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;

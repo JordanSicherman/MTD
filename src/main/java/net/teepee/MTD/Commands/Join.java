@@ -1,10 +1,11 @@
-package main.java.net.aemservers.MTD.Commands;
+package main.java.net.teepee.MTD.Commands;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.net.aemservers.MTD.MTD;
-import main.java.net.aemservers.MTD.Automation.Game;
+import main.java.net.teepee.MTD.MTD;
+import main.java.net.teepee.MTD.Automation.Game;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 
-import main.java.net.aemservers.MTD.MTD;
+import main.java.net.teepee.MTD.MTD;
 
 import org.bukkit.Effect;
 import org.bukkit.craftbukkit.libs.jline.internal.InputStreamReader;

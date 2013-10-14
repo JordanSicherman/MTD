@@ -1,10 +1,10 @@
-package main.java.net.aemservers.MTD.Listeners;
+package main.java.net.teepee.MTD.Listeners;
 
 import java.util.Random;
 
-import main.java.net.aemservers.MTD.MTD;
-import main.java.net.aemservers.MTD.MobDisguise;
-import main.java.net.aemservers.MTD.Automation.Game;
+import main.java.net.teepee.MTD.MTD;
+import main.java.net.teepee.MTD.MobDisguise;
+import main.java.net.teepee.MTD.Automation.Game;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;

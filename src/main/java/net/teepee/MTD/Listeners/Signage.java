@@ -1,7 +1,7 @@
-package main.java.net.aemservers.MTD.Listeners;
+package main.java.net.teepee.MTD.Listeners;
 
-import main.java.net.aemservers.MTD.MTD;
-import main.java.net.aemservers.MTD.Automation.Game;
+import main.java.net.teepee.MTD.MTD;
+import main.java.net.teepee.MTD.Automation.Game;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

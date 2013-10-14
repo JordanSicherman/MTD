@@ -1,23 +1,23 @@
-package main.java.net.aemservers.MTD;
+package main.java.net.teepee.MTD;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.net.aemservers.MTD.Automation.Game;
-import main.java.net.aemservers.MTD.Automation.Ticker;
-import main.java.net.aemservers.MTD.Commands.Classes;
-import main.java.net.aemservers.MTD.Commands.End;
-import main.java.net.aemservers.MTD.Commands.Games;
-import main.java.net.aemservers.MTD.Commands.Join;
-import main.java.net.aemservers.MTD.Commands.Quit;
-import main.java.net.aemservers.MTD.Commands.Start;
-import main.java.net.aemservers.MTD.Listeners.DeathDamage;
-import main.java.net.aemservers.MTD.Listeners.Disconnect;
-import main.java.net.aemservers.MTD.Listeners.LeaveDuringGame;
-import main.java.net.aemservers.MTD.Listeners.Movement;
-import main.java.net.aemservers.MTD.Listeners.PreStart;
-import main.java.net.aemservers.MTD.Listeners.Signage;
+import main.java.net.teepee.MTD.Automation.Game;
+import main.java.net.teepee.MTD.Automation.Ticker;
+import main.java.net.teepee.MTD.Commands.Classes;
+import main.java.net.teepee.MTD.Commands.End;
+import main.java.net.teepee.MTD.Commands.Games;
+import main.java.net.teepee.MTD.Commands.Join;
+import main.java.net.teepee.MTD.Commands.Quit;
+import main.java.net.teepee.MTD.Commands.Start;
+import main.java.net.teepee.MTD.Listeners.DeathDamage;
+import main.java.net.teepee.MTD.Listeners.Disconnect;
+import main.java.net.teepee.MTD.Listeners.LeaveDuringGame;
+import main.java.net.teepee.MTD.Listeners.Movement;
+import main.java.net.teepee.MTD.Listeners.PreStart;
+import main.java.net.teepee.MTD.Listeners.Signage;
 
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;

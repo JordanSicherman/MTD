@@ -1,8 +1,8 @@
-package main.java.net.aemservers.MTD.Listeners;
+package main.java.net.teepee.MTD.Listeners;
 
-import main.java.net.aemservers.MTD.Automation.Game;
-import main.java.net.aemservers.MTD.Automation.Teleport;
-import main.java.net.aemservers.MTD.Automation.Game.Gamestate;
+import main.java.net.teepee.MTD.Automation.Game;
+import main.java.net.teepee.MTD.Automation.Teleport;
+import main.java.net.teepee.MTD.Automation.Game.Gamestate;
 
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;

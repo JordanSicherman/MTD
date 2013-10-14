@@ -1,4 +1,4 @@
-package main.java.net.aemservers.MTD.Automation;
+package main.java.net.teepee.MTD.Automation;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import main.java.net.aemservers.MTD.MTD;
-import main.java.net.aemservers.MTD.MobDisguise;
-import main.java.net.aemservers.MTD.Commands.Msg;
+import main.java.net.teepee.MTD.MTD;
+import main.java.net.teepee.MTD.MobDisguise;
+import main.java.net.teepee.MTD.Commands.Msg;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

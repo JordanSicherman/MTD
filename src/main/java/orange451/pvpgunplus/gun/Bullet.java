@@ -2,7 +2,7 @@ package main.java.orange451.pvpgunplus.gun;
 
 import java.util.ArrayList;
 
-import main.java.net.aemservers.MTD.MTD;
+import main.java.net.teepee.MTD.MTD;
 import main.java.orange451.pvpgunplus.PVPGunExplosion;
 
 import org.bukkit.Bukkit;

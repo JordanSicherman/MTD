@@ -1,6 +1,6 @@
-package main.java.net.aemservers.MTD.Listeners;
+package main.java.net.teepee.MTD.Listeners;
 
-import main.java.net.aemservers.MTD.Automation.Game;
+import main.java.net.teepee.MTD.Automation.Game;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
